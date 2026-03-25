@@ -11,7 +11,27 @@ int main()
     cout << "Enter three integer values: ";
     cin >> num1 >> num2 >> num3;
 
-    // TODO: Find min, max, and med among num1, num2, num3
+    if (num1 < num2 && num1 < num3){
+        min = num1;
+    }
+    if (num2 < num1 && num2 < num3){
+        min = num2;
+    }
+    if (num3 < num2 && num3 < num1){
+        min = num3;
+    }
+    if (num1 > num2 && num1 > num3){
+        max = num1;
+    }
+    if (num2 > num1 && num2 > num3){
+        max = num2;
+    }
+    if (num3 > num2 && num3 > num1){
+        max = num3;
+    }
+    med = (num1 + num2 + num3) - min - max;
+    
+    
 
     cout << min << " " << med << " " << max << endl;
 }
